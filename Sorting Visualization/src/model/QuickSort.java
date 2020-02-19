@@ -13,7 +13,7 @@ public class QuickSort extends Algorithm {
 
 	@Override
 	public void sort() {
-		quickSort(0,n-1);
+		quickSort(0,numSize-1);
 	}
 	
 	private void quickSort(int low,int high) {
@@ -28,11 +28,11 @@ public class QuickSort extends Algorithm {
 	private int partition(int low,int high) {
 		int pivot=low;
 		for(int i=low+1;i<=high;i++) {
-			if(nums.get(i)<nums.get(low))
-				Collections.swap(nums, ++pivot, i);
+			if(numbers.get(i)<numbers.get(low))
+				Collections.swap(numbers, ++pivot, i);
 			updateView(sub,i,low,pivot);
 		}
-		Collections.swap(nums, pivot, low);
+		Collections.swap(numbers, pivot, low);
 		updateView(sub,-1,pivot,-1);
 		
 		return pivot;

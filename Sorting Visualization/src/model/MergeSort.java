@@ -11,7 +11,7 @@ public class MergeSort extends Algorithm {
 
 	@Override
 	public void sort() {
-		mergeSort(0,n-1);
+		mergeSort(0,numSize-1);
 	}
 
 	private void mergeSort(int low, int high) {
@@ -32,32 +32,31 @@ public class MergeSort extends Algorithm {
 		List<Integer> numsTemp=new ArrayList<Integer>();
 		
 		while(lowStart<=lowEnd && highStart<=highEnd) {
-			if(nums.get(lowStart)<nums.get(highStart)) {
-				numsTemp.add(nums.get(lowStart));
+			if(numbers.get(lowStart)<numbers.get(highStart)) {
+				numsTemp.add(numbers.get(lowStart));
 				lowStart++;
 			}
 			else {
-				numsTemp.add(nums.get(highStart));
+				numsTemp.add(numbers.get(highStart));
 				highStart++;
 			}
 			updateView(sub, -1, lowStart, highStart);
 		}
 		
 		while(lowStart<=lowEnd) {
-			numsTemp.add(nums.get(lowStart));
+			numsTemp.add(numbers.get(lowStart));
 			lowStart++;
 			updateView(sub, -1, lowStart, highStart);
 		}
 		
 		while(highStart<=highEnd) {
-			numsTemp.add(nums.get(highStart));
+			numsTemp.add(numbers.get(highStart));
 			highStart++;
 			updateView(sub, -1, lowStart, highStart);
 		}
 		
-		int nTemp=nums.size();
 		for(int i=low;i<=high;i++) {
-			nums.set(i, numsTemp.get(i-low));
+			numbers.set(i, numsTemp.get(i-low));
 			updateView(sub, i, -1,-1);
 		}
 			

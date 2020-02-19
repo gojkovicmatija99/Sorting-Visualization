@@ -6,6 +6,7 @@ import java.util.List;
 
 import model.Algorithm;
 import model.BubbleSort;
+import model.HeapSort;
 import model.InsertionSort;
 import model.MergeSort;
 import model.QuickSort;
@@ -39,6 +40,7 @@ public class SortController implements ActionListener {
 			case QuickSort:alg=new QuickSort(nums);break;
 			case MergeSort:alg=new MergeSort(nums);break;
 			case InsertionSort:alg=new InsertionSort(nums);break;
+			case HeapSort:alg=new HeapSort(nums);break;
 		}
 		return alg;
 	}

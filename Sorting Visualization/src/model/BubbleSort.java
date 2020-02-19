@@ -13,11 +13,11 @@ public class BubbleSort extends Algorithm {
 
 	@Override
 	public void sort(){	
-		for(int i=0;i<n;i++) {
+		for(int i=0;i<numSize;i++) {
 			Boolean isSwapped=false;
-			for(int j=0;j<n-i-1;j++) {
-				if(nums.get(j)>nums.get(j+1)) {
-					Collections.swap(nums, j, j+1);
+			for(int j=0;j<numSize-i-1;j++) {
+				if(numbers.get(j)>numbers.get(j+1)) {
+					Collections.swap(numbers, j, j+1);
 					isSwapped=true;
 				}	
 				updateView(sub,j,j+1,-1);

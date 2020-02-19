@@ -11,14 +11,14 @@ public class InsertionSort extends Algorithm {
 
 	@Override
 	public void sort() {
-		for(int i=1;i<n;i++) {
-			int key=nums.get(i);
+		for(int i=1;i<numSize;i++) {
+			int key=numbers.get(i);
 			int j=i-1;
 			updateView(sub, j+1, i, -1);
 			
-			while(j>=0 && nums.get(j)>key)
+			while(j>=0 && numbers.get(j)>key)
 			{
-				Collections.swap(nums, j, j+1);
+				Collections.swap(numbers, j, j+1);
 				j--;
 				updateView(sub, j+1, i, -1);
 			}

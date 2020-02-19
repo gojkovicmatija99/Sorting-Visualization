@@ -11,17 +11,17 @@ public class SelectionSort extends Algorithm {
 
 	@Override
 	public void sort() {
-		for(int i=0;i<n-1;i++) {
-			int min=nums.get(i);
+		for(int i=0;i<numSize-1;i++) {
+			int min=numbers.get(i);
 			int minInd=i;
-			for(int j=i+1;j<n;j++) {
-				if(min>nums.get(j)) {
-					min=nums.get(j);
+			for(int j=i+1;j<numSize;j++) {
+				if(min>numbers.get(j)) {
+					min=numbers.get(j);
 					minInd=j;
 				}
 				updateView(sub, j, minInd,-1);
 			}			
-			Collections.swap(nums, minInd, i);
+			Collections.swap(numbers, minInd, i);
 		}
 	}
 

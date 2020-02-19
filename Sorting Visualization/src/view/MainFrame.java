@@ -145,6 +145,7 @@ public class MainFrame extends JFrame implements ISubscriber{
 		cmbSort.addItem(Sort.InsertionSort);
 		cmbSort.addItem(Sort.QuickSort);
 		cmbSort.addItem(Sort.MergeSort);
+		cmbSort.addItem(Sort.HeapSort);
 	}
 
 	public List<Integer> generateList() {

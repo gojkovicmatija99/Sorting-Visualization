@@ -7,13 +7,13 @@ import observer.ISubscriber;
 import view.MainFrame;
 
 public abstract class Algorithm extends Thread implements IPublisher {
-	protected List<Integer> nums;
-	protected int n;
+	protected List<Integer> numbers;
+	protected int numSize;
 	protected ISubscriber sub;
 	
 	public Algorithm(List<Integer> nums) {
-		this.nums = nums;
-		this.n=nums.size();
+		this.numbers = nums;
+		this.numSize=nums.size();
 	}
 
 	@Override
