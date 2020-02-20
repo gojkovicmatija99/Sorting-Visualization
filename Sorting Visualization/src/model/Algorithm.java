@@ -18,9 +18,9 @@ public abstract class Algorithm extends Thread implements IPublisher {
 
 	@Override
 	public void run() {
-		sub.setControls(false);		
+		sub.setViewControls(false);		
 		sort();		
-		sub.setControls(true);
+		sub.setViewControls(true);
 	}
 	
 	public abstract void sort();

@@ -12,7 +12,6 @@ public class ShuffleController implements ActionListener {
 	public void actionPerformed(ActionEvent arg0) {
 		List<Integer> nums=MainFrame.getInstance().generateList();
 		MainFrame.getInstance().setNums(nums);
-		MainFrame.getInstance().getRect().setNums(nums);;
 	}
 
 }

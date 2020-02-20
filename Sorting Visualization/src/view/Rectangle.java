@@ -11,7 +11,7 @@ import javax.swing.BorderFactory;
 import javax.swing.JPanel;
 
 public class Rectangle extends JPanel{
-	private List<Integer> nums;
+	private List<Integer> numbers;
 	
 	private static int RED;
 	private static int BLUE;
@@ -24,9 +24,9 @@ public class Rectangle extends JPanel{
 	public void paint(Graphics g) {
 	    super.paint(g);
 	    
-	    for(int i=0;i<nums.size();i++) {
+	    for(int i=0;i<numbers.size();i++) {
 	    	colorRectangle(g,i);
-		    g.fillRect(PADDING+WIDTH*i,410-HEIGHT*nums.get(i),WIDTH,HEIGHT*nums.get(i));
+		    g.fillRect(PADDING+WIDTH*i,410-HEIGHT*numbers.get(i),WIDTH,HEIGHT*numbers.get(i));
 	    }
 	  }
 
@@ -42,12 +42,11 @@ public class Rectangle extends JPanel{
 	}
 
 	public Rectangle(List<Integer> nums) {
-		this.nums = nums;
+		this.numbers = nums;
 		calculateDimensions();
 	}
 	
-	public void updateNums(List<Integer> nums,int red,int blue,int green) {
-		this.nums=nums;
+	public void updateNums(int red,int blue,int green) {
 		RED=red;
 		BLUE=blue;
 		GREEN=green;
@@ -55,14 +54,14 @@ public class Rectangle extends JPanel{
 	}
 	
 	public void setNums(List<Integer> nums) {
-		this.nums = nums;
+		this.numbers = nums;
 		calculateDimensions();
 		repaint();
 	}
 
 	private void calculateDimensions() {
-		HEIGHT=(int) Math.ceil(400/nums.size());
-		WIDTH=(int) Math.ceil(800/nums.size());
-		PADDING=(int) Math.round((850-WIDTH*nums.size())/2);
+		HEIGHT=(int) Math.ceil(400/numbers.size());
+		WIDTH=(int) Math.ceil(800/numbers.size());
+		PADDING=(int) Math.round((850-WIDTH*numbers.size())/2);
 	}
 }

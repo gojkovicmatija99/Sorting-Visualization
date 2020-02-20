@@ -110,7 +110,6 @@ public class MainFrame extends JFrame implements ISubscriber{
 		controls.add(btnShuffle);
 		controls.add(btnStop);
 		
-		
 		add(rect,BorderLayout.CENTER);
 		add(controls,BorderLayout.SOUTH);
 		btnSort.addActionListener(new SortController());
@@ -170,7 +169,7 @@ public class MainFrame extends JFrame implements ISubscriber{
 
 	@Override
 	public void update(int red, int blue,int green) {
-		rect.updateNums(nums, red, blue,green);
+		rect.updateNums(red, blue,green);
 		try {
 			Thread.sleep(SPEED);
 		} catch (InterruptedException e) {
@@ -207,7 +206,7 @@ public class MainFrame extends JFrame implements ISubscriber{
 	}
 
 	@Override
-	public void setControls(boolean val) {
+	public void setViewControls(boolean val) {
 		btnSort.setEnabled(val);
 		btnShuffle.setEnabled(val);
 		jsElements.setEnabled(val);

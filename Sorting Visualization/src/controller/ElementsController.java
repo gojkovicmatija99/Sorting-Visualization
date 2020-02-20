@@ -15,7 +15,6 @@ public class ElementsController implements ChangeListener {
 		MainFrame.getInstance().setElements(elements);
 		List<Integer> nums=MainFrame.getInstance().generateList();
 		MainFrame.getInstance().setNums(nums);
-		MainFrame.getInstance().getRect().setNums(nums);
 	}
 
 }

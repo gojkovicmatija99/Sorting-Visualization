@@ -11,7 +11,7 @@ public class StopController implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
 		Algorithm alg=MainFrame.getInstance().getAlg();
-		MainFrame.getInstance().setControls(true);
+		MainFrame.getInstance().setViewControls(true);
 		alg.stop();
 	}
 
