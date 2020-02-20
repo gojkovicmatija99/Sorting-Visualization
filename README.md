@@ -14,7 +14,7 @@ A sorting algorithm is used to rearrange a given array or list elements accordin
 
 **Quick Sort** is a divide and conquer algorithm. It picks an element as pivot and partitions the given array around the picked pivot. 
 
-
+**Heap sort** is a comparison based sorting technique based on Binary Heap data structure. It is similar to selection sort where we first find the maximum element and place the maximum element at the end. The heap is represented by the given array.
 
 # Time and space complexity
 
@@ -25,5 +25,6 @@ A sorting algorithm is used to rearrange a given array or list elements accordin
 | Insertion Sort | Ω(n) | θ(n^2) | O(n^2) | O(1) |
 | Merge Sort | Ω(nlogn) | θ(nlogn) | O(nlogn) | O(n) |
 | Quick Sort | Ω(nlogn) | θ(nlogn) | O(n^2) | O(logn) |
+| Quick Sort | Ω(nlogn) | θ(nlogn) | O(nlogn) | O(1) |
 
 ![alt text](https://github.com/gojkovicmatija99/Sorting-Visualization/blob/master/Sorting%20Visualization/src/view/demo.PNG)
