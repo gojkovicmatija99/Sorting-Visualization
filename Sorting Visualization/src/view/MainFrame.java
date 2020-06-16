@@ -165,6 +165,7 @@ public class MainFrame extends JFrame implements ISubscriber{
 	
 	public void setNums(List<Integer> nums) {
 		this.nums = nums;
+		rect.setNums(nums);
 	}
 
 	@Override
