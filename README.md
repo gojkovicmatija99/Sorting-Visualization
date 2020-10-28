@@ -27,4 +27,4 @@ A sorting algorithm is used to rearrange a given array or list elements accordin
 | Quick Sort | Ω(nlogn) | θ(nlogn) | O(n^2) | O(logn) |
 | Heap Sort | Ω(nlogn) | θ(nlogn) | O(nlogn) | O(1) |
 
-![alt text](https://github.com/gojkovicmatija99/Sorting-Visualization/blob/master/Sorting%20Visualization/src/main/java/view/demo.PNG)
+![alt text](https://github.com/gojkovicmatija99/Sorting-visualization/blob/master/src/main/java/view/demo.PNG)
