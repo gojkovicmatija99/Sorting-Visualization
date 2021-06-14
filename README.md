@@ -2,6 +2,8 @@
 
 A sorting algorithm is used to rearrange a given array or list elements according to a comparison operator on the elements.
 
+Strategy, Observer and Singleton design patterns are used to build the application.
+
 # The algorithms
 
 **Bubble Sort** is the simplest sorting algorithm that works by repeatedly swapping the adjacent elements if they are in wrong order.
